@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhiming Zhou* | Qingru Zhang</title>
+    <link>https://qingruzhang.github.io/authors/zhiming-zhou/</link>
+      <atom:link href="https://qingruzhang.github.io/authors/zhiming-zhou/index.xml" rel="self" type="application/rss+xml" />
+    <description>Zhiming Zhou*</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://qingruzhang.github.io/img/icon-192.png</url>
+      <title>Zhiming Zhou*</title>
+      <link>https://qingruzhang.github.io/authors/zhiming-zhou/</link>
+    </image>
+    
+    <item>
+      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
+      <link>https://qingruzhang.github.io/publication/adashift/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/publication/adashift/</guid>
+      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
