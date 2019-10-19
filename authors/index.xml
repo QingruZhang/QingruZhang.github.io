@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | Academic</title>
-    <link>/authors/</link>
-      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <title>Authors | Qingru Zhang</title>
+    <link>https://qingruzhang.github.io/authors/</link>
+      <atom:link href="https://qingruzhang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://qingruzhang.github.io/img/icon-192.png</url>
       <title>Authors</title>
-      <link>/authors/</link>
+      <link>https://qingruzhang.github.io/authors/</link>
     </image>
     
     <item>
+      <title>**Qingru Zhang***</title>
+      <link>https://qingruzhang.github.io/authors/qingru-zhang/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/qingru-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guansong Lu</title>
+      <link>https://qingruzhang.github.io/authors/guansong-lu/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/guansong-lu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hongwei Wang</title>
+      <link>https://qingruzhang.github.io/authors/hongwei-wang/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/hongwei-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weinan Zhang</title>
+      <link>https://qingruzhang.github.io/authors/weinan-zhang/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/weinan-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yong Yu</title>
+      <link>https://qingruzhang.github.io/authors/yong-yu/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/yong-yu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zhiming Zhou*</title>
+      <link>https://qingruzhang.github.io/authors/zhiming-zhou/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/zhiming-zhou/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First author&#39;s name</title>
+      <link>https://qingruzhang.github.io/authors/first-authors-name/</link>
+      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/first-authors-name/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Second author&#39;s name</title>
+      <link>https://qingruzhang.github.io/authors/second-authors-name/</link>
+      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/second-authors-name/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title></title>
-      <link>/authors/admin/</link>
+      <link>https://qingruzhang.github.io/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.&lt;/p&gt;
+      <guid>https://qingruzhang.github.io/authors/admin/</guid>
+      <description>&lt;p&gt;I am a senior undergraduate student from &lt;strong&gt;Shanghai Jiao Tong University&lt;/strong&gt;.&lt;/p&gt;
 </description>
     </item>
     

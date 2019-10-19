@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications | Academic</title>
-    <link>/publication/</link>
-      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <title>Publications | Qingru Zhang</title>
+    <link>https://qingruzhang.github.io/publication/</link>
+      <atom:link href="https://qingruzhang.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://qingruzhang.github.io/img/6.jpg</url>
       <title>Publications</title>
-      <link>/publication/</link>
+      <link>https://qingruzhang.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
+      <link>https://qingruzhang.github.io/publication/adashift/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/publication/adashift/</guid>
+      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A publication title, such as title of a paper</title>
+      <link>https://qingruzhang.github.io/publication/exp/</link>
+      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/publication/exp/</guid>
+      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
