@@ -5,7 +5,7 @@
     <link>https://qingruzhang.github.io/publication/</link>
       <atom:link href="https://qingruzhang.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://qingruzhang.github.io/img/6.jpg</url>
       <title>Publications</title>
@@ -13,21 +13,20 @@
     </image>
     
     <item>
-      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
-      <link>https://qingruzhang.github.io/publication/adashift/</link>
-      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/publication/adashift/</guid>
-      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
+      <title>A Non-asymptotic comparison of SVRG and SGD: tradeoffs between compute and speed</title>
+      <link>https://qingruzhang.github.io/publication/svrg_nonasymptotic_analysis/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/publication/svrg_nonasymptotic_analysis/</guid>
+      <description>&lt;p&gt;Further details.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>A publication title, such as title of a paper</title>
-      <link>https://qingruzhang.github.io/publication/exp/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/publication/exp/</guid>
-      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
-</description>
+      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
+      <link>https://qingruzhang.github.io/publication/adashift/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/publication/adashift/</guid>
+      <description></description>
     </item>
     
   </channel>

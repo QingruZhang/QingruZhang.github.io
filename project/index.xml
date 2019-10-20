@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Qingru Zhang</title>
+    <link>https://qingruzhang.github.io/project/</link>
+      <atom:link href="https://qingruzhang.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 25 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://qingruzhang.github.io/img/6.jpg</url>
+      <title>Projects</title>
+      <link>https://qingruzhang.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>A Non-asymptotic comparison of SVRG and SGD: tradeoffs between compute and speed</title>
+      <link>https://qingruzhang.github.io/project/svrg_project/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/project/svrg_project/</guid>
+      <description>&lt;p&gt;Further details.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
+      <link>https://qingruzhang.github.io/project/adashiftproject/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/project/adashiftproject/</guid>
+      <description>&lt;p&gt;Further details.
+&lt;img src=&#34;11.jpg&#34; alt=&#34;Intuition&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

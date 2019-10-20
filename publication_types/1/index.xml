@@ -14,20 +14,20 @@
     
     <item>
       <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
-      <link>https://qingruzhang.github.io/publication/adashift/</link>
+      <link>https://qingruzhang.github.io/project/adashiftproject/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/publication/adashift/</guid>
-      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
+      <guid>https://qingruzhang.github.io/project/adashiftproject/</guid>
+      <description>&lt;p&gt;Further details.
+&lt;img src=&#34;11.jpg&#34; alt=&#34;Intuition&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>A publication title, such as title of a paper</title>
-      <link>https://qingruzhang.github.io/publication/exp/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/publication/exp/</guid>
-      <description>&lt;p&gt;Further details on your publication can be written here using &lt;em&gt;Markdown&lt;/em&gt; for formatting. This text will be displayed on the Publication Detail page.&lt;/p&gt;
-</description>
+      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
+      <link>https://qingruzhang.github.io/publication/adashift/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/publication/adashift/</guid>
+      <description></description>
     </item>
     
   </channel>

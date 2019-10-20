@@ -5,7 +5,7 @@
     <link>https://qingruzhang.github.io/authors/</link>
       <atom:link href="https://qingruzhang.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 25 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://qingruzhang.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -13,10 +13,42 @@
     </image>
     
     <item>
-      <title>**Qingru Zhang***(equal contribution)</title>
-      <link>https://qingruzhang.github.io/authors/qingru-zhangequal-contribution/</link>
-      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/authors/qingru-zhangequal-contribution/</guid>
+      <title>**Qingru Zhang***</title>
+      <link>https://qingruzhang.github.io/authors/qingru-zhang/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/qingru-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fartash Faghri</title>
+      <link>https://qingruzhang.github.io/authors/fartash-faghri/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/fartash-faghri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jimmy Ba</title>
+      <link>https://qingruzhang.github.io/authors/jimmy-ba/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/jimmy-ba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tianzong Zhang</title>
+      <link>https://qingruzhang.github.io/authors/tianzong-zhang/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/tianzong-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yuhuai Wu</title>
+      <link>https://qingruzhang.github.io/authors/yuhuai-wu/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/authors/yuhuai-wu/</guid>
       <description></description>
     </item>
     
@@ -57,22 +89,6 @@
       <link>https://qingruzhang.github.io/authors/zhiming-zhou/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://qingruzhang.github.io/authors/zhiming-zhou/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>First author&#39;s name</title>
-      <link>https://qingruzhang.github.io/authors/first-authors-name/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/authors/first-authors-name/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Second author&#39;s name</title>
-      <link>https://qingruzhang.github.io/authors/second-authors-name/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/authors/second-authors-name/</guid>
       <description></description>
     </item>
     
