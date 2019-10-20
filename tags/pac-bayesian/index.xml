@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine Learning | Qingru Zhang</title>
-    <link>https://qingruzhang.github.io/tags/machine-learning/</link>
-      <atom:link href="https://qingruzhang.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    <description>Machine Learning</description>
+    <title>PAC-Bayesian | Qingru Zhang</title>
+    <link>https://qingruzhang.github.io/tags/pac-bayesian/</link>
+      <atom:link href="https://qingruzhang.github.io/tags/pac-bayesian/index.xml" rel="self" type="application/rss+xml" />
+    <description>PAC-Bayesian</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://qingruzhang.github.io/img/icon-192.png</url>
-      <title>Machine Learning</title>
-      <link>https://qingruzhang.github.io/tags/machine-learning/</link>
+      <title>PAC-Bayesian</title>
+      <link>https://qingruzhang.github.io/tags/pac-bayesian/</link>
     </image>
     
     <item>
@@ -23,15 +23,6 @@
 &lt;li&gt;Considered to explain the generalization of neural network from dataset structure and&lt;/li&gt;
 &lt;li&gt;Presented a group talk about generalization bounds and rethinking generalization.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
-      <link>https://qingruzhang.github.io/project/adashiftproject/</link>
-      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/project/adashiftproject/</guid>
-      <description>&lt;p&gt;Intuitive Explanation of AdaShift: &lt;img src=&#34;../../img/AdaShift/IntuitiveExplain.jpg&#34; alt=&#34;Intuition&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

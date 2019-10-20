@@ -31,6 +31,20 @@
     </item>
     
     <item>
+      <title>A Survey on the generalization theory of neural network</title>
+      <link>https://qingruzhang.github.io/project/generalization_survey_project/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/project/generalization_survey_project/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Conducted a survey on the generalization theory and its related work.&lt;/li&gt;
+&lt;li&gt;Studied the proof of various generalization bounds and obtained a deep understanding on PAC-Bayesian framework, Rademacher complexity and VC-dimension.&lt;/li&gt;
+&lt;li&gt;Considered to explain the generalization of neural network from dataset structure and&lt;/li&gt;
+&lt;li&gt;Presented a group talk about generalization bounds and rethinking generalization.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>AdaShift: Decorrelation and Convergence of Adaptive Learning Rate Methods</title>
       <link>https://qingruzhang.github.io/project/adashiftproject/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>

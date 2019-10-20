@@ -53,18 +53,34 @@
     </item>
     
     <item>
-      <title>Adam</title>
-      <link>https://qingruzhang.github.io/tags/adam/</link>
-      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://qingruzhang.github.io/tags/adam/</guid>
+      <title>Generalization</title>
+      <link>https://qingruzhang.github.io/tags/generalization/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/tags/generalization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
       <link>https://qingruzhang.github.io/tags/machine-learning/</link>
-      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       <guid>https://qingruzhang.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PAC-Bayesian</title>
+      <link>https://qingruzhang.github.io/tags/pac-bayesian/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/tags/pac-bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adam</title>
+      <link>https://qingruzhang.github.io/tags/adam/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://qingruzhang.github.io/tags/adam/</guid>
       <description></description>
     </item>
     
