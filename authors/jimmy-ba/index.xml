@@ -113,7 +113,7 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;the-dynamic-of-sgd&#34;&gt;The Dynamic of SGD&lt;/h3&gt;
 
 &lt;p&gt;$$
-\mathrm{M}\left(\boldsymbol{\theta}^{(t+1)}\right)=\underbrace{(\mathrm{I}-\alpha \Sigma) \mathrm{M}\left(\boldsymbol{\theta}^{(t)}\right)(\mathrm{I}-\alpha \Sigma)}_{{1}: \text { gradient descent shrinkage }}
+\mathrm{M}\Big(\boldsymbol{\theta}^{(t+1)}\Big)=\underbrace{(\mathrm{I}-\alpha \Sigma) \mathrm{M}\Big(\boldsymbol{\theta}^{(t)}\Big)(\mathrm{I}-\alpha \Sigma)}_{{1}: \text { gradient descent shrinkage }}
 + \underbrace{\frac{\alpha^{2}}{b} \mathrm{C}\Big( \mathrm{M}(\boldsymbol{\theta}^{(t)})\Big)}_{  {2}:\text { input noise } }
 +\underbrace{\frac{\alpha^{2} \sigma_{y}^{2}}{b} \Sigma}_{{3}: \text { label noise }}
 $$&lt;/p&gt;
@@ -129,7 +129,7 @@ $$&lt;/p&gt;
 &lt;p&gt;Given the &lt;a href=&#34;#model&#34;&gt;model&lt;/a&gt; and our &lt;a href=&#34;#assumptions&#34;&gt;assumptions&lt;/a&gt;, we have the second moment of parameter as:&lt;/p&gt;
 
 &lt;p&gt;$$
-\mathbf{m}\left(\boldsymbol{\theta}^{(t)}\right)=R^{t}\left(\mathbf{m}\left(\boldsymbol{\theta}^{(0)}\right)-\frac{(\mathrm{I}-R)^{-1} V}{b}\right)+\frac{(\mathrm{I}-R)^{-1} V}{b}
+\mathbf{m}\Big(\boldsymbol{\theta}^{(t)}\Big)=R^{t}\left(\mathbf{m}\left(\boldsymbol{\theta}^{(0)}\right)-\frac{(\mathrm{I}-R)^{-1} V}{b}\right)+\frac{(\mathrm{I}-R)^{-1} V}{b}
 $$&lt;/p&gt;
 
 &lt;p&gt;Since $L\left(\boldsymbol{\theta^{(t)}}\right)= \frac{1}{2} \operatorname{diag}(\Sigma)^{\top} \operatorname{diag}\left(\mathbb{E}\left[\boldsymbol{\theta}^{(t)} \boldsymbol{\theta}^{(t)^{\top}}\right]\right)+\frac{1}{2} \sigma_{y}^{2}$, we can draw the exact expression of the expected loss.&lt;/p&gt;
