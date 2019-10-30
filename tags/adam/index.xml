@@ -17,7 +17,117 @@
       <link>https://qingruzhang.github.io/project/adashiftproject/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://qingruzhang.github.io/project/adashiftproject/</guid>
-      <description>&lt;p&gt;Intuitive Explanation of AdaShift: &lt;img src=&#34;../../img/AdaShift/IntuitiveExplain.jpg&#34; alt=&#34;Intuition&#34; /&gt;&lt;/p&gt;
+      <description>
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;the-nonconvergence-of-adam&#34;&gt;The Nonconvergence of Adam&lt;/h3&gt;
+
+&lt;p&gt;Update rule of Adam:
+$$
+\begin{aligned}
+&amp;amp; g_t = \nabla f_t\\&lt;br /&gt;
+&amp;amp; m_t = \beta_1 m_{t-1} + (1-\beta_1) g_t\label{eq:1}\\&lt;br /&gt;
+&amp;amp; v_t = \beta_2 v_{t-1} + (1-\beta_2) g_t^2\label{ew:2}\\\&lt;br /&gt;
+&amp;amp;\theta_{t+1} = \theta_t - \frac{\alpha_t}{\sqrt{v_t}}m_t
+\end{aligned}
+$$&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://openreview.net/forum?id=ryQu7f-RZ&#34; target=&#34;_blank&#34;&gt;Reddi et al.&lt;/a&gt; pointed out two type of non-convergence problem for Adam:
+&lt;a name=&#34;countereg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sequential Counterexample:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$$f_{t}(\theta)=\left\{\begin{array}{ll}{C \theta,} &amp;amp; {\text { if } t \bmod d=1} \\ {-\theta,} &amp;amp; {\text { otherwise }}\end{array}\right.$$&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stochastic Counterexample:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$$
+f_{t}(\theta)=\left\{\begin{array}{ll}{C \theta,} &amp;amp; {\text { with probability } p=\frac{1+\delta}{C+1}} \\ {-\theta,} &amp;amp; {\text { with probability } 1-p=\frac{C-\delta}{C+1}}\end{array}\right.
+$$&lt;/p&gt;
+
+&lt;p&gt;and they claim after fixing the issue about positive definiteness of $\Gamma_{t+1}=\frac{\sqrt{V_{t+1}}}{\alpha_{t+1}}-\frac{\sqrt{V_{t}}}{\alpha_{t}}$, the convergence will be guaranteed. Accordingly, &lt;a href=&#34;https://openreview.net/forum?id=ryQu7f-RZ&#34; target=&#34;_blank&#34;&gt;Reddi et al.&lt;/a&gt; proposed AMSGrad and AdamNC. However, these algorithms keep a non-decreasing $v_t$ or a long-memorization of gradients, which will slow down the training if a quite large gradient emerges. Therefore, a deep understanding on these non-convergence &lt;a href=&#34;#countereg&#34;&gt;counterexamples&lt;/a&gt; is needed.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;our-theoretical-analysis&#34;&gt;Our theoretical analysis&lt;/h3&gt;
+
+&lt;p&gt;Some warm up conclusions:
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;../../img/AdaShift/warm-up1.png&#34; alt=&#34;drawing&#34; style=&#34;width:300px; hight:300px&#34;/&gt;
+  &lt;/div&gt;
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;../../img/AdaShift/warm-up2.png&#34; alt=&#34;drawing&#34; style=&#34;width:300px; hight:300px&#34;/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Both $\beta_1$ and $\beta_2$  influence the direction and speed of optimization.&lt;/li&gt;
+&lt;li&gt;Critical value of $C$, at which Adam gets into non-convergence, increases as $\beta_1$ and $\beta_2$  getting large.&lt;/li&gt;
+&lt;li&gt;For any fixed $C$, as long as $\beta_1$ and $\beta_2$ large enough, non-convergence will disappear.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The Cause of Non-Convergence: Unbalanced Step Size&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$v_t$ is positively correlated to the scale of gradient $g_t$&lt;/li&gt;
+&lt;li&gt;It results in a decreasing step size for a large gradient and a increasing step size for a small gradient&lt;/li&gt;
+&lt;li&gt;It is common for adaptive optimizers.&lt;/li&gt;
+&lt;li&gt;Our tool: Net Update Factor - consider the effect of every gradients on the whole optimization process:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$$
+net(g_t) \triangleq \sum_{i=t}^{\infty}\frac{~\alpha_i}{\sqrt{v_i}}[(1-\beta_1)\beta_1^{i-t}g_t] = k(g_t) \cdot g_t
+$$&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Our theoretical conclusions:
+
+&lt;ol&gt;
+&lt;li&gt;$k( C ) &amp;lt; k( -1 )$&lt;/li&gt;
+&lt;li&gt;Decorrelating $v_t$ and $g_t$ will lead to convergence.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Rethinking the role of $v_t$:
+
+&lt;ul&gt;
+&lt;li&gt;$v_t$ reflects the gradient scale, and adjusts learning rate dynamically.&lt;/li&gt;
+&lt;li&gt;In AdaShift, current $v_t$ is independent with $g_t$, but the distribution of $v_t$ is close to $g_t$’s, and changes dynamically with $g_t$’s.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;adashift-optimizer&#34;&gt;AdaShift Optimizer&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../img/AdaShift/adashift_algorithm.png&#34; alt=&#34;drawing&#34; style=&#34;width:800px; &#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;The decorrelation operations:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temporal Shift: we postpone the calculation of $v_t$, using $g_{t-n}$ rather than $g_t$ to update $v_t$.
+
+&lt;ul&gt;
+&lt;li&gt;This decorrelation is based on the assumption of independence between mini-batches.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Spatial Decorrelation: Layer-wise adaptive learning rate.
+
+&lt;ul&gt;
+&lt;li&gt;For every seperate layer, we add a function $\phi$ over its gradient matrix ( or vector ), outputing a scalar to calculate shared $v_t$ for all parameters in this layer.&lt;/li&gt;
+&lt;li&gt;In our experiments, we choose $\phi$ as maximum function over gradient matries. Better design of $\phi$ is left as future work.&lt;/li&gt;
+&lt;li&gt;We no longer interpret $v_t$ as the second moment of $g_t$. Instead, it is a random variable, independent of $g_t$, while at the same time, reflects the overall gradient scale.&lt;/li&gt;
+&lt;li&gt;Adam sometimes does not generalize better than SGD, which might be related with the excessive learning rate adaptation in Adam. As a compromise between SGD and Adam, AdaShift has an improvement in term of generalization performance.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;A more intuitive explanation of AdaShift:
+&lt;img src=&#34;../../img/AdaShift/IntuitiveExplain.jpg&#34; alt=&#34;drawing&#34; style=&#34;width:600px;/&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

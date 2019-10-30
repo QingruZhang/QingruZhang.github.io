@@ -646,6 +646,14 @@
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/QingruZhang/AdaShift_Release" target="_blank" rel="noopener">
+  Code
+</a>
+
 
 
 
@@ -692,7 +700,117 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Intuitive Explanation of AdaShift: <img src="../../img/AdaShift/IntuitiveExplain.jpg" alt="Intuition" /></p>
+      
+
+<hr />
+
+<h3 id="the-nonconvergence-of-adam">The Nonconvergence of Adam</h3>
+
+<p>Update rule of Adam:
+$$
+\begin{aligned}
+&amp; g_t = \nabla f_t\\<br />
+&amp; m_t = \beta_1 m_{t-1} + (1-\beta_1) g_t\label{eq:1}\\<br />
+&amp; v_t = \beta_2 v_{t-1} + (1-\beta_2) g_t^2\label{ew:2}\\\<br />
+&amp;\theta_{t+1} = \theta_t - \frac{\alpha_t}{\sqrt{v_t}}m_t
+\end{aligned}
+$$</p>
+
+<p><a href="https://openreview.net/forum?id=ryQu7f-RZ" target="_blank">Reddi et al.</a> pointed out two type of non-convergence problem for Adam:
+<a name="countereg"></a></p>
+
+<ul>
+<li>Sequential Counterexample:</li>
+</ul>
+
+<p>$$f_{t}(\theta)=\left\{\begin{array}{ll}{C \theta,} &amp; {\text { if } t \bmod d=1} \\ {-\theta,} &amp; {\text { otherwise }}\end{array}\right.$$</p>
+
+<ul>
+<li>Stochastic Counterexample:</li>
+</ul>
+
+<p>$$
+f_{t}(\theta)=\left\{\begin{array}{ll}{C \theta,} &amp; {\text { with probability } p=\frac{1+\delta}{C+1}} \\ {-\theta,} &amp; {\text { with probability } 1-p=\frac{C-\delta}{C+1}}\end{array}\right.
+$$</p>
+
+<p>and they claim after fixing the issue about positive definiteness of $\Gamma_{t+1}=\frac{\sqrt{V_{t+1}}}{\alpha_{t+1}}-\frac{\sqrt{V_{t}}}{\alpha_{t}}$, the convergence will be guaranteed. Accordingly, <a href="https://openreview.net/forum?id=ryQu7f-RZ" target="_blank">Reddi et al.</a> proposed AMSGrad and AdamNC. However, these algorithms keep a non-decreasing $v_t$ or a long-memorization of gradients, which will slow down the training if a quite large gradient emerges. Therefore, a deep understanding on these non-convergence <a href="#countereg">counterexamples</a> is needed.</p>
+
+<hr />
+
+<h3 id="our-theoretical-analysis">Our theoretical analysis</h3>
+
+<p>Some warm up conclusions:
+<div class="row">
+  <div class="column">
+    <img src="../../img/AdaShift/warm-up1.png" alt="drawing" style="width:300px; hight:300px"/>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="column">
+    <img src="../../img/AdaShift/warm-up2.png" alt="drawing" style="width:300px; hight:300px"/>
+  </div>
+</div></p>
+
+<ul>
+<li>Both $\beta_1$ and $\beta_2$  influence the direction and speed of optimization.</li>
+<li>Critical value of $C$, at which Adam gets into non-convergence, increases as $\beta_1$ and $\beta_2$  getting large.</li>
+<li>For any fixed $C$, as long as $\beta_1$ and $\beta_2$ large enough, non-convergence will disappear.</li>
+</ul>
+
+<hr />
+
+<p>The Cause of Non-Convergence: Unbalanced Step Size</p>
+
+<ul>
+<li>$v_t$ is positively correlated to the scale of gradient $g_t$</li>
+<li>It results in a decreasing step size for a large gradient and a increasing step size for a small gradient</li>
+<li>It is common for adaptive optimizers.</li>
+<li>Our tool: Net Update Factor - consider the effect of every gradients on the whole optimization process:</li>
+</ul>
+
+<p>$$
+net(g_t) \triangleq \sum_{i=t}^{\infty}\frac{~\alpha_i}{\sqrt{v_i}}[(1-\beta_1)\beta_1^{i-t}g_t] = k(g_t) \cdot g_t
+$$</p>
+
+<ul>
+<li>Our theoretical conclusions:
+
+<ol>
+<li>$k( C ) &lt; k( -1 )$</li>
+<li>Decorrelating $v_t$ and $g_t$ will lead to convergence.</li>
+</ol></li>
+<li>Rethinking the role of $v_t$:
+
+<ul>
+<li>$v_t$ reflects the gradient scale, and adjusts learning rate dynamically.</li>
+<li>In AdaShift, current $v_t$ is independent with $g_t$, but the distribution of $v_t$ is close to $g_t$’s, and changes dynamically with $g_t$’s.</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h3 id="adashift-optimizer">AdaShift Optimizer</h3>
+
+<p><img src="../../img/AdaShift/adashift_algorithm.png" alt="drawing" style="width:800px; "/></p>
+
+<p>The decorrelation operations:</p>
+
+<ul>
+<li>Temporal Shift: we postpone the calculation of $v_t$, using $g_{t-n}$ rather than $g_t$ to update $v_t$.
+
+<ul>
+<li>This decorrelation is based on the assumption of independence between mini-batches.</li>
+</ul></li>
+<li>Spatial Decorrelation: Layer-wise adaptive learning rate.
+
+<ul>
+<li>For every seperate layer, we add a function $\phi$ over its gradient matrix ( or vector ), outputing a scalar to calculate shared $v_t$ for all parameters in this layer.</li>
+<li>In our experiments, we choose $\phi$ as maximum function over gradient matries. Better design of $\phi$ is left as future work.</li>
+<li>We no longer interpret $v_t$ as the second moment of $g_t$. Instead, it is a random variable, independent of $g_t$, while at the same time, reflects the overall gradient scale.</li>
+<li>Adam sometimes does not generalize better than SGD, which might be related with the excessive learning rate adaptation in Adam. As a compromise between SGD and Adam, AdaShift has an improvement in term of generalization performance.</li>
+</ul></li>
+<li>A more intuitive explanation of AdaShift:
+<img src="../../img/AdaShift/IntuitiveExplain.jpg" alt="drawing" style="width:600px;/></li>
+</ul>
 
     </div>
 
@@ -846,6 +964,14 @@
 
 
 
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://github.com/QingruZhang/AdaShift_Release" target="_blank" rel="noopener">
+  Code
+</a>
 
 
 
