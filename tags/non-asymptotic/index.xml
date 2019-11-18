@@ -200,7 +200,7 @@ $$&lt;/p&gt;
 
 &lt;h4 id=&#34;underparameterized-setting&#34;&gt;Underparameterized Setting&lt;/h4&gt;
 
-&lt;p&gt;The results in underparametrized regime corresponds to the analysis with label noise.&lt;/p&gt;
+&lt;p&gt;The results in underparametrized regime corresponds to the analysis with label noise. $ \mathbb{E}&lt;em&gt;{ \boldsymbol{x&lt;/em&gt;{i}} \in P&lt;em&gt;{\boldsymbol{x}}  } \left[ \left(\boldsymbol{x&lt;/em&gt;{i}}^{\top} \boldsymbol{\theta^{(t)}} - \epsilon_{i} \right)^{2} \right] = \mathbb{E}&lt;em&gt;{ \ boldsymbol{X} \in P&lt;/em&gt;{ \boldsymbol{X} } } \left[ \frac{1}{N} \sum&lt;em&gt;{ \boldsymbol{x&lt;/em&gt;{i}} \in \boldsymbol{X} } \left(\boldsymbol{x_{i}}^{\top} \boldsymbol{\theta^{(t)}} - \epsilon_{i} \right)^{2} \right]  $&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Logistic Regression on MNIST&lt;/strong&gt;&lt;/p&gt;
 
